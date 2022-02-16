@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  StyleSheet,
   SafeAreaView,
   Text,
 } from 'react-native'
@@ -7,11 +8,21 @@ import {
 const App = () => {
   return (
     <SafeAreaView>
-      <Text>Administrador de Citas {''}
+      <Text style={styles.titulo}> Administrador de Citas {'\n'}
         <Text>VETERINARIA</Text>
       </Text>
     </SafeAreaView> 
   );
 }
+
+
+const styles = StyleSheet.create({
+  titulo: {
+    textAlign: 'center',
+    fontSize: 30,
+    color: '#374151',
+    fontWeight: 'bold 100',
+  }
+})
 
 export default App;
