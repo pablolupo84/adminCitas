@@ -3,6 +3,8 @@ import {
   StyleSheet,
   SafeAreaView,
   Text,
+  Button,
+  Pressable,
 } from 'react-native'
 
 const App = () => {
@@ -11,6 +13,12 @@ const App = () => {
       <Text style={styles.titulo}> Administrador de Citas {'\n'}
         <Text style={styles.tituloBold}>VETERINARIA</Text>
       </Text>
+
+      <Pressable
+        onPress={ () => console.log("Presionaste el boton Nueva Cita")}
+        >
+        <Text>Nueva Cita</Text>
+      </Pressable>
     </SafeAreaView> 
   );
 }
