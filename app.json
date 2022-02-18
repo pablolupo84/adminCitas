@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Administrador de citas Veterinarias",
+    "githubUrl": "https://github.com/pablolupo84/adminCitas"
   }
 }
