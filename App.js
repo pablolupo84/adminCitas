@@ -8,6 +8,9 @@ import {
 } from 'react-native'
 
 const App = () => {
+
+  const nuevaCitaHandler = () => console.log("Presionaste el boton Nueva Cita")
+  
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.titulo}> Administrador de Citas {'\n'}
@@ -15,7 +18,7 @@ const App = () => {
       </Text>
 
       <Pressable
-        onPress={ () => console.log("Presionaste el boton Nueva Cita")}
+        onPress={ nuevaCitaHandler}
         >
         <Text>Nueva Cita</Text>
       </Pressable>
