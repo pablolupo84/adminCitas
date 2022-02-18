@@ -5,6 +5,7 @@ import {
   Text,
   Button,
   Pressable,
+  Modal
 } from 'react-native'
 
 const App = () => {
@@ -22,6 +23,13 @@ const App = () => {
         >
         <Text style={styles.btnTextoNuevaCita}>Nueva Cita</Text>
       </Pressable>
+
+      <Modal 
+        animationType='slide'
+        visible={false}
+      >
+        <Text>Desde Modal</Text>
+      </Modal>
     </SafeAreaView> 
   );
 }
