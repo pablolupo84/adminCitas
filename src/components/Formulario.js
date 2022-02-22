@@ -95,7 +95,7 @@ const Formulario = ({modalVisible}) => {
                         <DatePicker
                             date={fecha}
                             locale='es'
-                            onDateChange={(date)=>setFecha(date)}                 
+                            onDateChange={(fecha)=>setFecha(fecha)}                 
                         />
                     </View>
                     
