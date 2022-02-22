@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {
     Text,
     Modal,
@@ -11,7 +11,14 @@ import {
   
 
 const Formulario = ({modalVisible}) => {
-  return (
+  
+    const [paciente,setPaciente]=useState('')
+    const [propietario,setPropietario]=useState('')
+    const [email,setEmail]=useState('')
+    const [telefono,setTelefono]=useState('')
+    const [sintomas,setSintomas]=useState('')
+  
+    return (
     
     <Modal
         animationType='slide'
@@ -30,7 +37,9 @@ const Formulario = ({modalVisible}) => {
                     <TextInput 
                         style={styles.input}
                         placeholder='Nombre de Paciente'
-                        placeholderTextColor={'#666'}    
+                        placeholderTextColor={'#666'}  
+                        value={paciente}  
+                        onChangeText={setPaciente}
                     />
                 </View>
 
@@ -41,7 +50,9 @@ const Formulario = ({modalVisible}) => {
                     <TextInput 
                         style={styles.input}
                         placeholder='Nombre de Propietario'
-                        placeholderTextColor={'#666'}    
+                        placeholderTextColor={'#666'}  
+                        value={propietario}  
+                        onChangeText={setPropietario}  
                     />
                 </View>
 
@@ -54,6 +65,8 @@ const Formulario = ({modalVisible}) => {
                         placeholder='Email de Propietario'
                         placeholderTextColor={'#666'}  
                         keyboardType='email-address'  
+                        value={email}  
+                        onChangeText={setEmail}
                     />
                 </View>
                 
@@ -65,7 +78,10 @@ const Formulario = ({modalVisible}) => {
                         style={styles.input}
                         placeholder='Telefono de Propietario'
                         placeholderTextColor={'#666'}  
-                        keyboardType='number-pad'  
+                        keyboardType='number-pad'
+                        value={telefono}  
+                        onChangeText={setTelefono}  
+                        maxLength={10}
                     />
                 </View>
 
@@ -74,9 +90,13 @@ const Formulario = ({modalVisible}) => {
                         Sintomas
                     </Text>
                     <TextInput 
-                        style={styles.input}
+                        style={[styles.input,styles.sintomasInput]}
                         placeholder='Sintomas'
-                        placeholderTextColor={'#666'}   
+                        placeholderTextColor={'#666'} 
+                        value={sintomas}  
+                        onChangeText={setSintomas}  
+                        multiline={true}
+                        numberOfLines={4}
                     />
                 </View>
             </ScrollView>
@@ -116,6 +136,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         padding: 15,
         borderRadius:10,
+    },
+    sintomasInput:{
+        height:100,
     }
     
 })
