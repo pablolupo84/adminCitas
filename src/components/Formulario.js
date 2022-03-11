@@ -9,7 +9,7 @@ import {
     ScrollView
   } from 'react-native'
 
-import DatePicker from 'react-native-date-picker'
+import DateTimePicker from '@react-native-community/datetimepicker';
   
 const Formulario = ({modalVisible}) => {
   
@@ -92,10 +92,10 @@ const Formulario = ({modalVisible}) => {
                         Fecha Alta
                     </Text>
                     <View style={styles.fechaContenedor}>
-                        <DatePicker
+                        <DateTimePicker
                             date={fecha}
                             locale='es'
-                            onDateChange={(fecha)=>setFecha(fecha)}                 
+                            onDateChange={(date)=>setFecha(date)}                 
                         />
                     </View>
                     
